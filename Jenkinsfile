@@ -1,29 +1,11 @@
 pipeline {
     agent any
-
     stages {
-        stage('Clone Repo') {
+        stage('Run Python Script') {
             steps {
-                  git url: 'https://github.com/ankithlg/p2.git', credentialsId: 'github-token' 
+                bat 'python hello.py'
             }
         }
-
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
-
-        stage('Build React App') {
-            steps {
-                bat 'npm run build'
-            }
-        }
-
-        stage('Deploy Locally') {
-            steps {
-                bat 'deploy.bat'
-            }
-        }
+       
     }
 }
