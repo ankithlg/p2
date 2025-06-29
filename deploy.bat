@@ -1,4 +1,4 @@
-deploy.bat
+
 @echo off
 REM Set paths
 set SOURCE_DIR=%~dp0build
