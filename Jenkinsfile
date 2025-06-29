@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                  git url: 'https://github.com/ankithlg/final.git', credentialsId: 'github-token' 
+                  git url: 'https://github.com/ankithlg/p2.git', credentialsId: 'github-token' 
             }
         }
 
